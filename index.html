@@ -1,12 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promena</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Promena - Transformación Fitness</title>
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+    <header class="header">
+        <div class="hero">
+            <h1 class="title__hero">Desata Tu Mejor Versión</h1>
+            <p class="text__hero">¡Empieza hoy mismo tu viaje hacia una vida más saludable y activa con rutinas personalizadas que se ajustan a tus necesidades!</p>
+            <p class="subtitle__hero">Transforma tu cuerpo en solo 12 semanas con nuestro enfoque integral</p>
+            <a href="#about" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </header>
+    
+    <section id="about" class="section about">
+        <div class="container">
+            <h2>Tu Guía en el Camino hacia tu Mejor Versión</h2>
+            <p>¡Bienvenida a mi espacio dedicado al fitness y al bienestar!
+                Mi nombre es Maricela Montoya y estoy aquí para acompañarte 
+                en cada paso de tu viaje hacia una vida más saludable y en forma.
+                Mi enfoque no se limita al ejercicio físico. Junto con los 
+                entrenamientos, te proporcionaré asesoramiento nutricional 
+                y consejos para mantener una mentalidad positiva y enfocada en el progreso.</p>
+            <img src="./img/fondo1.png" alt="Entrenamiento en FitLife">
+        </div>
+    </section>
+
+    <section id="why" class="section why">
+        <div class="container">
+            <h2>¿Por qué Elegirme?</h2>
+            <div class="card-container">
+                <div class="card">
+                    <i class="icon">🏆</i>
+                    <h3>Experiencia</h3>
+                    <p>Más de 10 años ayudando a personas a alcanzar sus metas.</p>
+                </div>
+                <div class="card">
+                    <i class="icon">💪</i>
+                    <h3>Programas Personalizados</h3>
+                    <p>Rutinas adaptadas a tus necesidades y objetivos específicos.</p>
+                </div>
+                <div class="card">
+                    <i class="icon">🥗</i>
+                    <h3>Nutrición</h3>
+                    <p>Consejos y planes de alimentación para complementar tu entrenamiento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section services">
+        <div class="container">
+            <h2>Nuestros Servicios</h2>
+            <div class="service-list">
+                <div class="service">
+                    <h3>Entrenamiento Personal</h3>
+                    <p>Sesiones uno a uno con nuestros entrenadores expertos.</p>
+                </div>
+                <div class="service">
+                    <h3>Clases Grupales</h3>
+                    <p>Entrena con otros en un ambiente motivador y divertido.</p>
+                </div>
+                <div class="service">
+                    <h3>Consultoría Nutricional</h3>
+                    <p>Planifica tus comidas con la ayuda de nuestros especialistas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2>Contáctanos</h2>
+            <p>¡Nos encantaría saber de ti! Completa el formulario a continuación o síguenos en nuestras redes sociales.</p>
+            <form action="#" class="contact-form">
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Correo Electrónico" required>
+                <textarea placeholder="Mensaje" required></textarea>
+                <button type="submit" class="btn">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 FitLife. Todos los derechos reservados.</p>
+            <ul class="social-links">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+        </div>
+    </footer>
+
     <script src="index.js"></script>
 </body>
 </html>
