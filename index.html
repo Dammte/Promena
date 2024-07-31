@@ -7,29 +7,42 @@
     <link rel="stylesheet" href="./index.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <header class="header">
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
         <div class="hero">
             <h1 class="title__hero">Desata Tu Mejor Versión</h1>
             <p class="text__hero">¡Empieza hoy mismo tu viaje hacia una vida más saludable y activa con rutinas personalizadas que se ajustan a tus necesidades!</p>
             <p class="subtitle__hero">Transforma tu cuerpo en solo 12 semanas con nuestro enfoque integral</p>
-            <a href="#about" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
+            <a href="#about" class="scroll-down"><i class="fas fa-angle-double-down"></i></a>
         </div>
     </header>
+    
     
     <section id="about" class="section about">
         <div class="container">
             <h2>Tu Guía en el Camino hacia tu Mejor Versión</h2>
-            <p>¡Bienvenida a mi espacio dedicado al fitness y al bienestar!
-                Mi nombre es Maricela Montoya y estoy aquí para acompañarte 
-                en cada paso de tu viaje hacia una vida más saludable y en forma.
-                Mi enfoque no se limita al ejercicio físico. Junto con los 
-                entrenamientos, te proporcionaré asesoramiento nutricional 
-                y consejos para mantener una mentalidad positiva y enfocada en el progreso.</p>
-            <img src="./img/fondo1.png" alt="Entrenamiento en FitLife">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="./img/fondo1.png" alt="Entrenamiento en FitLife">
+                </div>
+                <div class="about-text">
+                    <p>¡Bienvenida a mi espacio dedicado al fitness y al bienestar!
+                        Mi nombre es Maricela Montoya y estoy aquí para acompañarte 
+                        en cada paso de tu viaje hacia una vida más saludable y en forma.
+                        Mi enfoque no se limita al ejercicio físico. Junto con los 
+                        entrenamientos, te proporcionaré asesoramiento nutricional 
+                        y consejos para mantener una mentalidad positiva y enfocada en el progreso.</p>
+                </div>
+            </div>
         </div>
-    </section>
+    </section>    
 
     <section id="why" class="section why">
         <div class="container">
@@ -53,26 +66,37 @@
             </div>
         </div>
     </section>
+    
+    
 
     <section id="services" class="section services">
         <div class="container">
             <h2>Nuestros Servicios</h2>
             <div class="service-list">
                 <div class="service">
+                    <img src="path/to/your-image1.jpg" alt="Entrenamiento Personal" class="service-image">
                     <h3>Entrenamiento Personal</h3>
                     <p>Sesiones uno a uno con nuestros entrenadores expertos.</p>
                 </div>
                 <div class="service">
+                    <img src="path/to/your-image2.jpg" alt="Clases Grupales" class="service-image">
                     <h3>Clases Grupales</h3>
                     <p>Entrena con otros en un ambiente motivador y divertido.</p>
                 </div>
                 <div class="service">
+                    <img src="path/to/your-image3.jpg" alt="Consultoría Nutricional" class="service-image">
                     <h3>Consultoría Nutricional</h3>
                     <p>Planifica tus comidas con la ayuda de nuestros especialistas.</p>
+                </div>
+                <div class="service">
+                    <img src="path/to/your-image4.jpg" alt="Planificación de Objetivos" class="service-image">
+                    <h3>Planificación de Objetivos</h3>
+                    <p>Establece y sigue tus metas con la ayuda de nuestros expertos.</p>
                 </div>
             </div>
         </div>
     </section>
+    
 
     <section id="contact" class="section contact">
         <div class="container">
@@ -90,13 +114,13 @@
     <footer class="footer">
         <div class="container">
             <p>&copy; 2024 FitLife. Todos los derechos reservados.</p>
-            <ul class="social-links">
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Twitter</a></li>
-            </ul>
+            <div class="credits">
+                Hecho por <a href="https://www.tuperfil.com" target="_blank" title="Visita mi perfil">Daniel Jimenez</a>
+            </div>
         </div>
     </footer>
+    
+    
 
     <script src="index.js"></script>
 </body>
