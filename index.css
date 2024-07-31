@@ -287,19 +287,38 @@ body {
     object-fit: cover;
 }
 
-/* Ajustes Responsivos */
 @media (max-width: 768px) {
+    .about {
+        padding: 20px 10px;
+    }
+
+    .about h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
     .about-content {
         flex-direction: column;
         align-items: center;
-        gap: 20px; /* Ajustar el espaciado en dispositivos móviles */
+        gap: 20px; 
     }
+
     .about-text, .about-image {
         max-width: 100%;
-        margin: 0; /* Eliminar márgenes en dispositivos móviles */
+        margin: 0; 
     }
+
     .about-text {
-        max-height: none; /* Eliminar la limitación de altura en dispositivos móviles */
+        font-size: 1rem;
+        padding: 10px; 
+        max-height: none;
+        overflow: visible;
+        box-shadow: none;
+    }
+
+    .about-image img {
+        border-radius: 10px;
+        box-shadow: none;
     }
 }
 
@@ -330,7 +349,7 @@ body {
    Why Section Styles 
 --------------------------------- */
 .section.why {
-    background: #F5F5F5;
+    background: linear-gradient(to bottom, #F5F5F5, #F5F5F5 70%, #ADD8E6 100%);
     padding: 60px 20px;
     color: #333;
     text-align: center;
@@ -356,7 +375,7 @@ body {
 }
 
 .card {
-    background: #FFFFFF; /* Blanco */
+    background: #FFFFFF;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -424,9 +443,9 @@ body {
    Services Section Styles 
 --------------------------------- */
 .section.services {
-    background: #FAF9F6; /* Gris muy claro para un fondo elegante */
+    background: linear-gradient(to bottom, #ADD8E6, #ADD8E6 20%, #FAF9F6 80%);
     padding: 60px 20px;
-    color: #333; /* Gris oscuro para el texto */
+    color: #333;
     text-align: center;
 }
 
@@ -434,7 +453,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 3rem;
     font-weight: 800;
-    color: #4A3C31; /* Café oscuro */
+    color: #4A3C31;
     margin-bottom: 40px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -442,31 +461,31 @@ body {
 .service-list {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; /* Espacio igual entre tarjetas */
-    gap: 30px; /* Espacio entre tarjetas */
-    flex-wrap: nowrap; /* Evita que los elementos se muevan a la siguiente línea */
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: nowrap;
     max-width: 1200px;
     margin: 0 auto;
-    overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
+    overflow-x: auto;
 }
 
 .service {
-    background: #FFFFFF; /* Blanco */
+    background: #FFFFFF;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 240px; /* Ajustar el tamaño para 4 cards en una fila */
+    width: 240px;
     text-align: center;
-    color: #333; /* Gris oscuro para el texto */
+    color: #333;
     position: relative;
-    overflow: hidden; /* Asegura que las imágenes no sobresalgan */
+    overflow: hidden;
 }
 
 .service-image {
     width: 100%;
     height: 150px;
     object-fit: cover;
-    border-bottom: 2px solid #E0E0E0; /* Borde sutil gris claro */
+    border-bottom: 2px solid #E0E0E0;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -475,7 +494,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
-    color: #4A3C31; /* Café oscuro */
+    color: #4A3C31;
     margin: 15px 0;
 }
 
@@ -483,13 +502,12 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     line-height: 1.6;
-    color: #666; /* Gris medio para el texto */
+    color: #666;
 }
 
-/* Ajustes Responsivos */
 @media (max-width: 1200px) {
     .service {
-        width: 220px; /* Ajustar el tamaño para pantallas más pequeñas */
+        width: 220px;
     }
 }
 
@@ -497,80 +515,81 @@ body {
     .service-list {
         flex-direction: column;
         align-items: center;
-        gap: 20px; /* Ajustar el espaciado en dispositivos móviles */
-        overflow-x: visible; /* Desactivar el desplazamiento horizontal */
+        gap: 20px;
+        overflow-x: visible;
     }
     .service {
-        width: 90%; /* Ampliar el ancho de las tarjetas en dispositivos móviles */
+        width: 90%;
     }
 }
+
 
 /* --------------------------------- 
    Contact Section Styles 
 --------------------------------- */
 .section.contact {
-    background: #F8F8F8; /* Gris muy claro para el fondo */
-    padding: 60px 20px;
+    background: #F8F8F8;
+    padding: 50px 20px;
     text-align: center;
-    color: #333; /* Gris oscuro para el texto */
+    color: #333;
 }
 
 .section.contact h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 800;
-    color: #4A3C31; /* Café oscuro */
+    color: #4A3C31;
     margin-bottom: 20px;
     position: relative;
 }
 
 .section.contact p {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #666; /* Gris medio para el texto */
-    margin-bottom: 40px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 30px;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 600px;
+    max-width: 500px;
     margin: 0 auto;
-    background: #FFFFFF; /* Fondo blanco para el formulario */
+    background: #FFFFFF;
     border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 2px solid #E0E0E0; /* Borde gris claro */
+    padding: 10px; 
+    margin-bottom: 15px; 
+    border: 1px solid #E0E0E0;
     border-radius: 5px;
     font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
+    font-size: 0.9rem; 
     color: #333;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: #4A3C31; /* Café oscuro */
-    box-shadow: 0 0 5px rgba(74, 60, 49, 0.3); /* Sombra alrededor del campo */
-    outline: none; /* Eliminar el contorno por defecto */
+    border-color: #4A3C31;
+    box-shadow: 0 0 5px rgba(74, 60, 49, 0.3);
+    outline: none;
 }
 
 .contact-form button.btn {
-    background: #4A3C31; /* Café oscuro */
-    color: #FFFFFF; /* Blanco */
+    background: #4A3C31;
+    color: #FFFFFF;
     border: none;
-    padding: 15px 30px;
+    padding: 12px 25px; 
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 700;
     border-radius: 5px;
     cursor: pointer;
@@ -578,64 +597,150 @@ body {
 }
 
 .contact-form button.btn:hover {
-    background: #3E2A1A; /* Café más oscuro para el efecto hover */
-    transform: translateY(-2px); /* Efecto de elevación */
+    background: #3E2A1A;
+    transform: translateY(-2px);
 }
 
 .contact-form button.btn:active {
-    background: #3E2A1A; /* Café más oscuro */
-    transform: translateY(0); /* Aplana el botón */
+    background: #3E2A1A;
+    transform: translateY(0);
 }
 
-/* Ajustes Responsivos */
 @media (max-width: 768px) {
     .section.contact {
-        padding: 40px 20px;
+        padding: 30px 15px; 
     }
     
     .contact-form {
-        padding: 20px;
+        padding: 15px; 
     }
     
     .contact-form input,
     .contact-form textarea {
-        margin-bottom: 15px;
+        margin-bottom: 10px; 
     }
     
     .contact-form button.btn {
-        font-size: 1rem;
-        padding: 12px 24px;
+        font-size: 0.9rem; 
+        padding: 10px 20px; 
     }
 }
+
 
 /* --------------------------------- 
    Footer Styles 
 --------------------------------- */
 .footer {
-    background: #4A3C31; /* Café oscuro para un diseño elegante */
-    color: #F8F8F8; /* Blanco para el texto */
+    background: #4A3C31;
+    color: #F8F8F8;
     padding: 20px 0;
     text-align: center;
+    max-height: 52px;
 }
 
 .footer p, .footer .credits {
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     margin: 0;
-    display: inline; /* Mostrar en línea */
+    display: inline;
 }
 
 .footer .credits {
     font-size: 0.9rem;
-    margin-left: 20px; /* Espaciado entre el texto de derechos y el crédito */
+    margin-left: 20px;
 }
 
 .footer .credits a {
-    color: #F7B733; /* Color dorado para el enlace */
+    color: #F7B733;
     text-decoration: none;
     font-weight: 600;
 }
 
 .footer .credits a:hover {
-    text-decoration: underline; /* Subrayar el enlace al pasar el mouse */
+    text-decoration: underline;
+}
+
+/* --------------------------------- 
+   Ready Section Styles 
+--------------------------------- */
+.section.ready {
+    background: linear-gradient(to right, #f8b195, #f67280);
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.section.ready h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section.ready p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.section.ready .btn {
+    background-color: #fff;
+    color: #f67280;
+    padding: 15px 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+.section.ready .btn:hover {
+    background-color: #f67280;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.section.ready .btn:active {
+    transform: translateY(0);
+}
+
+/* --------------------------------- 
+   Back to Top Button Styles 
+--------------------------------- */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4A3C31;
+    color: #fff;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background-color: #3E2A1A;
+    transform: scale(1.1);
+}
+
+.back-to-top i {
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px;
+        font-size: 1rem;
+    }
 }
