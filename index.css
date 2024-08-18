@@ -12,7 +12,7 @@ body {
     color: #2c3e50;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -41,8 +41,6 @@ html{
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 90%, rgb(197, 113, 194));
-    /*linear-gradient(to bottom, rgba(78, 4, 76, 0.91) 25%, rgba(187, 106, 216, 0.8) 80%)*/
     z-index: 1;
 }
 
@@ -86,6 +84,7 @@ html{
 .scroll-down {
     display: inline-block;
     color: #FFD700;
+    /* color: #3498db; */
     font-size: 2.5rem;
     text-decoration: none;
     border-radius: 50%;
@@ -214,7 +213,6 @@ html{
    About Section Styles 
 --------------------------------- */
 .about {
-    /*background: linear-gradient(to bottom right, #8e2de2, #f7b733);*/
     background: linear-gradient(to bottom, rgb(197, 113, 194) 15%, rgba(126, 55, 123, 0.91), rgba(187, 106, 216, 0.8) 80%);
     padding: 30px 20px;
     position: relative;
@@ -306,17 +304,18 @@ html{
     .about-content {
         flex-direction: column;
         align-items: center;
-        gap: 20px; 
+        gap: 20px;
     }
 
-    .about-text, .about-image {
+    .about-text,
+    .about-image {
         max-width: 100%;
-        margin: 0; 
+        margin: 0;
     }
 
     .about-text {
         font-size: 1rem;
-        padding: 10px; 
+        padding: 10px;
         max-height: none;
         overflow: visible;
         box-shadow: none;
@@ -355,20 +354,20 @@ html{
    Why Section Styles 
 --------------------------------- */
 .section.why {
-    background: linear-gradient(to bottom, rgba(187, 106, 216, 0.8) 23%, #F5F5F5 70%, #ADD8E6 100%);
-    /*linear-gradient(160.5deg, rgba(37, 2, 36, 0.91) 25%, rgba(187, 106, 216, 0.8) 80%);*/
+    background-color: #ffffff;
+    /* Fondo blanco */
     padding: 60px 20px;
-    color: #333;
+    color: #333333;
     text-align: center;
 }
 
 .section.why h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 800;
-    color: #4A3C31;
+    color: #333333;
     margin-bottom: 40px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .card-container {
@@ -382,15 +381,16 @@ html{
 }
 
 .card {
-    background: #FFFFFF;
+    background: #ffffff;
+    /* Fondo de tarjeta blanco */
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 280px;
     text-align: center;
-    color: #333;
+    color: #333333;
     position: relative;
-    border: 2px solid #E0E0E0;
+    border: 2px solid #333333;
     transition: transform 0.3s, box-shadow 0.3s;
     align-items: center;
 }
@@ -402,7 +402,7 @@ html{
     left: 0;
     width: 5px;
     height: 100%;
-    background: linear-gradient(to bottom, #4A3C31, #C5A88A);
+    background: linear-gradient(to bottom, #333333, #666666);
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
@@ -415,7 +415,7 @@ html{
 .card .icon {
     font-size: 3rem;
     margin-bottom: 20px;
-    color: #4A3C31;
+    color: #333333;
     width: 14vh;
 }
 
@@ -423,18 +423,18 @@ html{
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
-    color: #4A3C31;
+    color: #333333;
     margin-bottom: 15px;
-    background: linear-gradient(to right, #4A3C31, #C5A88A);
-    background-clip: text; 
-    -webkit-text-fill-color: transparent; 
+    background: linear-gradient(to right, #333333, #666666);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .card p {
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     line-height: 1.6;
-    color: #666;
+    color: #666666;
 }
 
 @media (max-width: 768px) {
@@ -443,18 +443,20 @@ html{
         align-items: center;
         gap: 20px;
     }
+
     .card {
         width: 90%;
     }
 }
 
+
 /* --------------------------------- 
    Services Section Styles 
 --------------------------------- */
 .section.services {
-    background: linear-gradient(to bottom, #ADD8E6, #ADD8E6 30%, rgba(173,216,230,1) 80%);
+    background: linear-gradient(to bottom, #3a3a3a, #1e1e1e);
     padding: 60px 20px;
-    color: #333;
+    color: #ffffff;
     text-align: center;
 }
 
@@ -462,9 +464,9 @@ html{
     font-family: 'Montserrat', sans-serif;
     font-size: 3rem;
     font-weight: 800;
-    color: #4A3C31;
+    color: #f0f0f0;
     margin-bottom: 40px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .service-list {
@@ -479,13 +481,13 @@ html{
 }
 
 .service {
-    background: #FFFFFF;
+    background: linear-gradient(to bottom, #ffffff, #d6d6d6);
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 240px;
     text-align: center;
-    color: #333;
+    color: #333333;
     position: relative;
     overflow: hidden;
 }
@@ -494,7 +496,7 @@ html{
     width: 100%;
     height: 150px;
     object-fit: cover;
-    border-bottom: 2px solid #E0E0E0;
+    border-bottom: 2px solid #dddddd;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -503,7 +505,7 @@ html{
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
-    color: #4A3C31;
+    color: #333333;
     margin: 15px 0;
 }
 
@@ -511,7 +513,7 @@ html{
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     line-height: 1.6;
-    color: #666;
+    color: #666666;
 }
 
 @media (max-width: 1200px) {
@@ -527,6 +529,7 @@ html{
         gap: 20px;
         overflow-x: visible;
     }
+
     .service {
         width: 90%;
     }
@@ -534,103 +537,172 @@ html{
 
 
 /* --------------------------------- 
+   Plans Section Styles 
+--------------------------------- */
+.section-plans {
+    background: linear-gradient(to bottom, #2c2c2c, #1a1a1a);
+    padding: 60px 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.plans-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.plan-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+    color: #333333;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.plan-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.plan-card .price {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #ff6f61;
+    margin-bottom: 20px;
+}
+
+.plan-card .features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #666666;
+}
+
+.plan-card .features li {
+    margin-bottom: 10px;
+}
+
+.plan-card .btn {
+    background-color: #ff6f61;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.plan-card .btn:hover {
+    background-color: #ff5e50;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .plans-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .plan-card {
+        width: 90%;
+    }
+}
+
+
+
+/* --------------------------------- 
    Contact Section Styles 
 --------------------------------- */
 .section.contact {
-    background: rgb(236, 136, 203);
-    padding: 50px 20px;
+    background: linear-gradient(to bottom, #f9f9f9, #e0e0e0);
+    padding: 60px 20px;
+    color: #333333;
     text-align: center;
-    color: #333;
 }
 
 .section.contact h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 800;
-    color: #4A3C31;
+    color: #333333;
     margin-bottom: 20px;
-    position: relative;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .section.contact p {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.1rem;
-    line-height: 1.5;
-    color: #ffffff;
+    font-size: 1rem;
+    color: #666666;
     margin-bottom: 30px;
 }
 
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
-    background: rgb(223, 191, 241);    border-radius: 10px;
-    padding: 20px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #cccccc;
 }
 
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 10px; 
-    margin-bottom: 15px; 
-    border: 1px solid #E0E0E0;
+    background: #ffffff;
+    border: 1px solid #cccccc;
     border-radius: 5px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.9rem; 
-    color: #333;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    padding: 10px;
+    color: #333333;
+    margin-bottom: 15px;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: #4A3C31;
-    box-shadow: 0 0 5px rgba(74, 60, 49, 0.3);
-    outline: none;
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #888888;
 }
 
 .contact-form button.btn {
-    background: #0dbcdb;
-    color: #413f3f;
+    background: #ff6f61;
+    color: #ffffff;
     border: none;
-    padding: 12px 25px; 
+    border-radius: 5px;
+    padding: 15px 25px;
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     font-weight: 700;
-    border-radius: 5vh;
     cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .contact-form button.btn:hover {
-    background: #08daff;
-    transform: translateY(-2px);
-}
-
-.contact-form button.btn:active {
-    background: #3E2A1A;
-    transform: translateY(0);
+    background: #ff5e50;
+    color: #ffffff;
 }
 
 @media (max-width: 768px) {
-    .section.contact {
-        padding: 30px 15px; 
-    }
-    
     .contact-form {
-        padding: 15px; 
-    }
-    
-    .contact-form input,
-    .contact-form textarea {
-        margin-bottom: 10px; 
-    }
-    
-    .contact-form button.btn {
-        font-size: 0.9rem; 
-        padding: 10px 20px; 
+        padding: 15px;
     }
 }
 
@@ -646,7 +718,8 @@ html{
     max-height: 52px;
 }
 
-.footer p, .footer .credits {
+.footer p,
+.footer .credits {
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     margin: 0;
@@ -672,15 +745,17 @@ html{
    Ready Section Styles 
 --------------------------------- */
 .section.ready {
-    background: linear-gradient(0deg, rgb(236, 136, 203) 50%, rgb(236, 136, 203) 58%, rgba(173,216,230,1) 100%);
-    color: hsl(0, 0%, 21%);
+    background-color: #ffffff;
+    color: #333333;
     text-align: center;
-    padding: 60px 20px;
+    padding: 40px 20px;
 }
 
-.ready-container-2{
-    display: flex; 
+.ready-container-2 {
+    display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .section.ready h2 {
@@ -688,8 +763,8 @@ html{
     font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 20px;
-    color: #4A3C31;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    color: #333333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .section.ready p {
@@ -697,15 +772,16 @@ html{
     font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 30px;
+    color: #666666;
 }
 
 .ready-paragraph {
-    padding: 10vh;
+    padding: 5vh;
 }
 
 .section.ready .btn {
-    background-color: #fff;
-    color: #505050;
+    background-color: #333333;
+    color: #ffffff;
     padding: 15px 30px;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2rem;
@@ -713,23 +789,27 @@ html{
     border-radius: 5px;
     text-decoration: none;
     transition: background 0.3s, color 0.3s, transform 0.3s;
+    border: 2px solid #333333;
 }
 
 .section.ready .btn:hover {
-    background-color: #37cacf;
-    color: #fff;
+    background-color: #ffffff;
+    color: #333333;
     transform: translateY(-2px);
+    border: 2px solid #333333;
 }
 
 .section.ready .btn:active {
+    background-color: #666666;
+    color: #ffffff;
     transform: translateY(0);
 }
 
-.ready-video{
+.ready-video {
     margin-top: 20vh;
     display: inline-block;
-    padding: 0px; 
-    border: 5px solid #a12fff; 
+    padding: 0px;
+    border: 5px solid #333333;
     border-radius: 15rem;
     overflow: hidden;
 }
@@ -737,9 +817,9 @@ html{
 .ready-video video {
     margin: auto;
     margin-bottom: 0rem;
-    display: block; 
-    border-radius:50rem; 
-    width: 100%; 
+    display: block;
+    border-radius: 50rem;
+    width: 100%;
     height: auto;
 }
 
@@ -750,19 +830,20 @@ html{
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #4A3C31;
-    color: #fff;
-    padding: 15px;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    font-size: 1.2rem;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
     display: none;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    z-index: 1000;
-    scroll-behavior: smooth;
+    border-radius: 100px;
 }
+
+.back-to-top.show {
+    display: block;
+}
+
 
 .back-to-top:hover {
     background-color: #3E2A1A;
