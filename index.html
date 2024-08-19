@@ -12,6 +12,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
@@ -22,7 +26,7 @@
         });
     })();
     </script>
-    <script src="index.js"></script>
+    <script defer src="index.js"></script>
 </head>
 
 <body>
@@ -43,36 +47,16 @@
             <p class="text__hero">¡Empieza hoy mismo tu viaje hacia una vida más saludable y activa con rutinas
                 personalizadas que se ajustan a tus necesidades!</p>
             <p class="subtitle__hero">Transforma tu cuerpo en solo 12 semanas con nuestro enfoque integral</p>
-            <a href="#about" class="scroll-down"><i class="fas fa-angle-double-down"></i></a>
+            <a href="#why" class="scroll-down"><i class="fas fa-angle-double-down"></i></a>
         </div>
     </header>
-
-
-    <!-- <section id="about" class="section about">
-        <div class="container">
-            <h2>Tu Guía en el Camino hacia tu Mejor Versión</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="./img/fondo1.png" alt="Entrenamiento en FitLife">
-                </div>
-                <div class="about-text">
-                    <p>¡Bienvenida a mi espacio dedicado al fitness y al bienestar!
-                        Mi nombre es Maricela Montoya y estoy aquí para acompañarte 
-                        en cada paso de tu viaje hacia una vida más saludable y en forma.
-                        Mi enfoque no se limita al ejercicio físico. Junto con los 
-                        entrenamientos, te proporcionaré asesoramiento nutricional 
-                        y consejos para mantener una mentalidad positiva y enfocada en el progreso.</p>
-                </div>
-            </div>
-        </div>
-    </section>     -->
 
     <section id="why" class="section why">
         <div class="container">
             <h2>¿Por qué Elegirme?</h2>
             <div class="card-container">
                 <div class="card">
-                    <img src="./img/winner.png" class="icon" alt="Winner">
+                    <img src="./img/trophy.png" alt="Created by Flaticon - Trophy" class="icon">
                     <h3>Experiencia y Pasión</h3>
                     <p>
                         Con años de experiencia y una verdadera pasión por el fitness,
@@ -106,25 +90,25 @@
         <div class="container">
             <h2>Nuestros Servicios</h2>
             <div class="service-list">
-                <div class="service">
+                <div class="service hidden">
                     <img src="https://images.pexels.com/photos/793759/pexels-photo-793759.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                         alt="Entrenamiento Personal" class="service-image">
                     <h3>Plan Nutricional</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, nesciunt.</p>
                 </div>
-                <div class="service">
+                <div class="service hidden">
                     <img src="https://images.pexels.com/photos/5795688/pexels-photo-5795688.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                         alt="Clases Grupales" class="service-image">
                     <h3>Asesoramiento Integral</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, nesciunt.</p>
                 </div>
-                <div class="service">
+                <div class="service hidden">
                     <img src="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                         alt="Consultoría Nutricional" class="service-image">
                     <h3>Seguimiento Personalizado</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, nesciunt.</p>
                 </div>
-                <div class="service">
+                <div class="service hidden">
                     <img src="https://images.pexels.com/photos/20616942/pexels-photo-20616942/free-photo-of-mujer-joven-reflejo-reflexion.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                         alt="Planificación de Objetivos" class="service-image">
                     <h3>Motivación Constante</h3>
@@ -134,25 +118,25 @@
         </div>
     </section>
 
-    <!-- <section id="ready" class="section ready">
-        <div class="container">
-            <div class="ready-container-2">
-                <div class="ready-paragraph">
-                    <h2>¿Estás lista para comenzar?</h2>
-                    <p>¡Es el momento de dar el primer paso hacia tu mejor versión! No estás sola en este viaje, estoy aquí para ayudarte en cada paso del camino.</p>
-                    <p>¿Lista para transformar tu vida? No importa cuál sea tu punto de partida o tus objetivos, estoy comprometida a trabajar contigo para superar desafíos y alcanzar resultados que te enorgullezcan.</p>
-                    <p>¡Es momento de invertir en ti misma y comenzar este emocionante viaje hacia una versión más fuerte y feliz de ti misma! Ponte en contacto conmigo hoy mismo para dar el primer paso hacia un cambio positivo y duradero en tu vida. Juntas, podemos lograr grandes cosas.</p>
-                    <p>¡No esperes más, tu mejor versión te está esperando!</p>
-                    <a href="#contact" class="btn btn-primary">¡Únete Ahora!</a>
-                </div>
-                <div class="ready-video">
-                    <video width="350" height="500" autoplay muted loop>
-                        <source src="./video/WeDidIt.mp4" type="video/mp4">
-                    </video>                    
-                </div>
+    <section id="about" class="section about">
+        <div class="about-container">
+            <img src="./img/bike.png" alt="Bike" class="about-icon-1">
+            <img src="./img/fitness.png" alt="Fitness" class="about-icon-2">
+            <img src="./img/fitness2.png" alt="Fitness2" class="about-icon-3">
+            <div class="about-image">
+                <img src="./img/ImgAbout.png" alt="Imagen about">
+            </div>
+            <div class="about-text-container">
+                <h2>Acerca de mi</h2>
+                <p class="about-text">¡Bienvenida a mi espacio dedicado al fitness y al bienestar!
+                    Mi nombre es Maricela Montoya y estoy aquí para acompañarte 
+                    en cada paso de tu viaje hacia una vida más saludable y en forma.
+                    Mi enfoque no se limita al ejercicio físico. Junto con los 
+                    entrenamientos, te proporcionaré asesoramiento nutricional 
+                    y consejos para mantener una mentalidad positiva y enfocada en el progreso.</p>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <section id="ready" class="section ready">
         <div class="container">
@@ -169,6 +153,7 @@
     </section>
 
     <section class="section-plans">
+        <h2>¡Compra algún plan para crecer!</h2>
         <div class="plans-container">
             <div class="plan-card standard-plan">
                 <h3>Plan Estándar</h3>
@@ -199,44 +184,33 @@
     <section id="contact" class="section contact">
         <div class="container">
             <h2>Contáctame</h2>
-<<<<<<< HEAD
-            <p>¡Nos encantaría saber de ti! Completa el formulario a continuación o síguenos en nuestras redes sociales.</p>
-            <form action="#" class="contact-form">
-                <label for="">¿Cómo te llamas?</label>
-                <input type="text" placeholder="Nombre" id="Name">
-                <label for="">¿Cuál es tu email?</label>
-                <input type="email" placeholder="Correo Electrónico" required id="Email">
-                <label for="">¿En qué te puedo ayudar?</label>
-                <textarea placeholder="Mensaje" required id="Message"></textarea>
-                <button type="submit" class="btn" onclick="sendEmail()">Enviar Mensaje</button>
-=======
             <p>¡Nos encantaría saber de ti! Completa el formulario a continuación o síguenos en nuestras redes sociales.
             </p>
             <form action="#" method="post" class="contact-form">
                 <div class="form-group">
-                    <input type="text" placeholder="Nombre" name="name" required>
+                    <input type="text" placeholder="Nombre" id="Name" required>
                 </div>
                 <div class="form-group">
-                    <input type="email" placeholder="Correo Electrónico" name="email" required>
+                    <input type="email" placeholder="Correo Electrónico" id="Email" required>
                 </div>
                 <div class="form-group">
-                    <textarea placeholder="Mensaje" name="message" required></textarea>
+                    <textarea placeholder="Mensaje" id="Message" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
->>>>>>> origin
+                <button type="submit" class="btn btn-primary" onclick="sendEmail()">Enviar Mensaje</button>
             </form>
         </div>
     </section>
 
 
-    <!-- <footer class="footer">
+    <footer class="footer">
         <div class="container">
             <p>&copy; 2024. Todos los derechos reservados.</p>
             <div class="credits">
                 Hecho por <a href="https://github.com/J1M3N3Z" target="_blank" title="Visita mi perfil">Daniel Jimenez</a>
+                y <a href="https://github.com/Everhech" target="_blank" title="Visita mi perfil">Edwin Restrepo</a>
             </div>
         </div>
-    </footer> -->
+    </footer>
 
     <a href="#" class="back-to-top">
         <i class="fas fa-chevron-up"></i>

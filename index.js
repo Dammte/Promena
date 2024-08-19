@@ -1,3 +1,6 @@
+/**
+ * @description Scroll fast when the view is on an specific part of the page.
+ */
 document.addEventListener("scroll", function () {
   const backToTopButton = document.querySelector(".back-to-top");
   if (window.scrollY > 300) {
@@ -7,6 +10,10 @@ document.addEventListener("scroll", function () {
   }
 });
 
+
+/**
+ * @description This allows us to send a message from html to an email.
+ */
 function sendEmail() {
   let params = {
     name: document.getElementById("Name").value,
@@ -24,3 +31,21 @@ function sendEmail() {
     }
   );
 }
+
+
+/**
+ * @description Creation of animations with CSS
+ */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    } else {
+      entry.target.classList.remove('show');
+    }
+  });
+});
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((element) => observer.observe(element));
+
