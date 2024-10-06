@@ -1,14 +1,6 @@
 /**
  * @description Scroll fast when the view is on an specific part of the page.
  */
-// document.addEventListener("scroll", function () {
-//   const backToTopButton = document.querySelector(".back-to-top");
-//   if (window.scrollY > 2000) {
-//     backToTopButton.style.display = "block";
-//   } else {
-//     backToTopButton.style.display = "none";
-//   }
-// });
 const backToTopButton = document.querySelector(".back-to-top");
 
 window.addEventListener("scroll", () => {
