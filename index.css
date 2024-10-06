@@ -7,14 +7,16 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Open Sans', sans-serif;
-    color: #2c3e50;
-}
-
 html {
     scroll-behavior: smooth;
 }
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #2c3e50;
+    scroll-behavior: smooth;
+}
+
 
 .hidden {
     opacity: 0;
@@ -29,6 +31,18 @@ html {
     transform: translateX(0);
 }
 
+.down {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(20%);
+    transition: all 2s;
+}
+
+.up {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
 
 /* --------------------------------- 
    Animations 
@@ -39,34 +53,6 @@ html {
     }
     to {
         opacity: 1;
-    }
-}
-
-@keyframes appear-about {
-    from {
-        opacity: 0;
-        scale: 0.5;
-        transform: translateY(-100px);
-    }
-    to {
-        opacity: 1;
-        scale: 1;
-        transform: translateY(0px);
-    }
-}
-
-@keyframes scrolling {
-    from {
-        opacity: 0;
-        filter: blur(5px);
-        transform: translateX(-100px);
-        /*clip-path: inset(100% 100% 0 0);*/
-    }
-    to {
-        opacity: 1;
-        filter: blur(0);
-        transform: translateX(0px);
-        /*clip-path: inset(0 0 0 0);*/
     }
 }
 
@@ -95,6 +81,7 @@ html {
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
+    scroll-behavior: smooth;
     animation: appear 0.5s linear;
 }
 
@@ -146,9 +133,9 @@ html {
 }
 
 .scroll-down {
+    scroll-behavior: smooth;
     display: inline-block;
     color: #FFD700;
-    /* color: #3498db; */
     font-size: 2.5rem;
     text-decoration: none;
     border-radius: 50%;
@@ -174,11 +161,13 @@ html {
 --------------------------------- */
 .section {
     padding: 60px 20px;
+    scroll-behavior: smooth;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    scroll-behavior: smooth;
 }
 
 /* --------------------------------- 
@@ -245,11 +234,61 @@ html {
    Footer Styles 
 --------------------------------- */
 .footer {
-    background-color: rgb(18, 24, 39);
+    position: relative;
+    width: 100%;
+    background-color: #0a1c36;
     color: #fff;
-    padding: 20px 0;
+    padding: 20px 50px;
+    display: flex;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
 }
+
+.footer .wave {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: url(img/wave.png);
+    background-size: 1000px 100px;
+    filter: blur(2px) brightness(0.20);
+}
+
+.footer .wave#wave1{
+    z-index: 1000;
+    max-width: 200vw;
+    opacity: 1;
+    bottom: 0;
+    background-size: 1000px 50px;
+}
+
+.footer .wave#wave2{
+    z-index: 999;
+    opacity: 0.8;
+    bottom: 10px;
+    background-size: 650px 50px;
+}
+
+.footer .wave#wave3{
+    z-index: 998;
+    opacity: 0.7;
+    bottom: 20px;
+    background-size: 450px 50px;
+}
+
+.footer .wave#wave4{
+    z-index: 998;
+    opacity: 0.6;
+    bottom: 20px;
+    background-size: 350px 50px;
+}
+
+
+
 
 /* --------------------------------- 
    Social Links Styles 
@@ -279,7 +318,9 @@ html {
 .about {
     /*background: linear-gradient(to bottom right, #8e2de2, #f7b733);*/
     /*background: linear-gradient(to bottom, rgb(77, 73, 73) 15%, rgb(100, 98, 98) 80%, rgb(53, 51, 51));*/
-    background:rgb(18, 24, 39);
+    /*background:rgb(62, 63, 63);*/
+    background-image: url("./img/FondoAbout.png");
+    background-size: 70rem;
     /*background: linear-gradient(to bottom, rgb(197, 113, 194) 15%, rgba(126, 55, 123, 0.91), rgba(187, 106, 216, 0.8) 80%);*/
     position: relative;
     display: flex;
@@ -288,6 +329,7 @@ html {
     min-height: 50vh;
     max-height: 100vh;
     overflow: hidden;
+    scroll-behavior: smooth;
 }
 
 .about::before {
@@ -320,35 +362,6 @@ html {
     align-items: center;
 }
 
-.about-icon-1 {
-    position: absolute;
-    z-index: 1;
-    scale: 0.4;
-    rotate: 340deg;
-    left: 50vh;
-    top: -20vh;
-    opacity: 0.7;
-}
-
-.about-icon-2 {
-    position: absolute;
-    z-index: 1;
-    scale: 0.4;
-    rotate: 20deg;
-    right: -25vh;
-    top: -20vh;
-    opacity: 0.7;
-}
-
-.about-icon-3 {
-    position: absolute;
-    z-index: 1;
-    scale: 0.4;
-    right: 25vh;
-    bottom: -20vh;
-    opacity: 0.7;
-}
-
 .about-text {
     flex: 1;
     font-family: 'Poppins', sans-serif;
@@ -358,12 +371,13 @@ html {
     padding: 15px;
     position: relative;
     text-align: justify;
-    background: rgb(18, 24, 39);
+    background: none;
     border-radius: 10px;
     /* box-shadow: 0 4px 8px rgba(247, 240, 240, 0.3); */
     max-height: 40vh;
     max-width: 140vh;
     overflow: auto;
+    scroll-behavior: smooth;
 }
 
 .about-image {
@@ -381,8 +395,16 @@ html {
 }
 
 @media (max-width: 768px) {
+    .section.about {
+        background-size: cover;
+        padding: 20px 10px;
+        align-items: center;
+        height: auto;
+    }
+
     .about {
-        max-height: 100vh;
+        text-align: center;
+        align-items: center;
         padding: 20px 10px;
     }
 
@@ -391,35 +413,46 @@ html {
         margin-bottom: 0;
     }
 
-    .about-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+    .about-text-container{
+        position: relative;
+        margin: auto;
+        max-width: 90%;
+        margin-top: -100px;
+        margin-bottom: 60px;
     }
 
     .about-container{
-        display: inline-block;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
     }
 
     .about-text,
     .about-image {
+        justify-content: center;
         max-width: 100%;
-        margin: 0;
     }
 
     .about-text {
         font-size: 1rem;
-        padding: 5px;
-        max-height: none;
+        padding: 0 15px;
         overflow: visible;
+        scroll-behavior: smooth;
         box-shadow: none;
-        margin-bottom: 70px;
+        word-wrap: break-word;
+        margin-top: 10px;
     }
 
     .about-image img {
+        position: relative;
         border-radius: 10px;
         box-shadow: none;
-        scale: 0.8;
+        width: 100%;
+        scale: 0.6;
+        margin-bottom: 0;
+        margin-top: -10px;
     }
 }
 
@@ -450,10 +483,10 @@ html {
    Why Section Styles 
 --------------------------------- */
 .section.why {
-    background-color: rgb(18, 24, 39);
+    background-color: rgb(255, 255, 255);
     /* Fondo blanco */
     padding: 60px 20px;
-    color: #333333;
+    scroll-behavior: smooth;
 }
 
 .section.why h2 {
@@ -461,7 +494,7 @@ html {
     font-size: 2.5rem;
     font-weight: 800;
     text-align: center;
-    color: #ffffff;
+    color: #2e2e2e;
     margin-bottom: 40px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
@@ -474,22 +507,18 @@ html {
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
-    animation: scrolling linear;
-    animation-timeline: view();
-    animation-range: entry 30% cover 40%;
 }
 
 .card {
-    background: #ffffff;
     /* Fondo de tarjeta blanco */
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 280px;
     text-align: center;
-    color: #333333;
+    color: #000000;
     position: relative;
-    border: 2px solid #333333;
+    border: 5px solid #000000;
     transition: transform 0.3s, box-shadow 0.3s;
     align-items: center;
 }
@@ -501,7 +530,7 @@ html {
     left: 0;
     width: 5px;
     height: 100%;
-    background: linear-gradient(to bottom, #333333, #666666);
+    background: linear-gradient(to bottom, #333333, #000000);
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
@@ -514,7 +543,7 @@ html {
 .card .icon {
     font-size: 3rem;
     margin-bottom: 20px;
-    color: #333333;
+    color: #000000;
     width: 14vh;
 }
 
@@ -522,7 +551,7 @@ html {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
-    color: #333333;
+    color: #000000;
     margin-bottom: 15px;
     background: linear-gradient(to right, #333333, #666666);
     background-clip: text;
@@ -533,7 +562,7 @@ html {
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     line-height: 1.6;
-    color: #666666;
+    color: #000000;
 }
 
 .card-container:nth-child(2){
@@ -566,7 +595,7 @@ html {
 --------------------------------- */
 .section.services {
     /* background: linear-gradient(to bottom, #3a3a3a, #1e1e1e); */
-    background: rgb(255, 255, 255);
+    background: rgb(62, 63, 63);
     padding: 60px 20px;
     color: #ffffff;
     text-align: center;
@@ -576,9 +605,9 @@ html {
     font-family: 'Montserrat', sans-serif;
     font-size: 3rem;
     font-weight: 800;
-    color: #221e1e;
+    color: #ffffff;
     margin-bottom: 40px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    text-shadow: 2px 2px 4px rgba(53, 53, 53, 0.4);
 }
 
 .service-list {
@@ -590,6 +619,7 @@ html {
     max-width: 1200px;
     margin: 0 auto;
     overflow-x: auto;
+    scroll-behavior: smooth;
 }
 
 .service-list:nth-child(2){
@@ -606,22 +636,23 @@ html {
 
 .service {
     /* background: linear-gradient(to bottom, #ffffff, #d6d6d6); */
-    background: rgb(18, 24, 39);
+    background: rgb(255, 255, 255);
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(100, 99, 99, 0.1);
     width: 240px;
     text-align: center;
     color: #333333;
     position: relative;
     overflow: hidden;
+    scroll-behavior: smooth;
 }
 
 .service-image {
     width: 100%;
     height: 150px;
     object-fit: cover;
-    border-bottom: 2px solid #dddddd;
+    border-bottom: 2px solid #161616;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -630,7 +661,7 @@ html {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #000000;
     margin: 15px 0;
 }
 
@@ -638,7 +669,7 @@ html {
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     line-height: 1.6;
-    color: #e0e0e0;
+    color: #000000;
 }
 
 @media (max-width: 1200px) {
@@ -653,6 +684,7 @@ html {
         align-items: center;
         gap: 20px;
         overflow-x: visible;
+        scroll-behavior: smooth;
     }
 
     .service {
@@ -665,16 +697,16 @@ html {
    Plans Section Styles 
 --------------------------------- */
 .section-plans {
-    /* background: linear-gradient(to bottom, #2c2c2c, #1a1a1a); */
-    background: rgb(18, 24, 39);
+    background: rgb(255, 255, 255);
     padding: 60px 20px;
     color: #ffffff;
     text-align: center;
 }
 
-.section-plans h2{
+.section-plans h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
+    color: #000000;
     font-weight: 800;
     margin-bottom: 20px;
 }
@@ -686,17 +718,18 @@ html {
     max-width: 1200px;
     margin: 0 auto;
     flex-wrap: wrap;
+    perspective: 1000px; /* Añadido para la perspectiva 3D */
 }
 
 .plan-card {
-    background: #ffffff;
+    background: #4e4e4e;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(90, 85, 85, 0.2);
     width: 300px;
     text-align: center;
-    color: #333333;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.6s, box-shadow 0.3s;
+    transform-style: preserve-3d; /* Necesario para la rotación 3D */
 }
 
 .plan-card:hover {
@@ -708,15 +741,15 @@ html {
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
     font-weight: 700;
-    color: #333333;
+    color: #ffffff;
     margin-bottom: 10px;
 }
 
 .plan-card .price {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     font-weight: 600;
-    color: #ff6f61;
+    color: #FFD700;
     margin-bottom: 20px;
 }
 
@@ -726,16 +759,21 @@ html {
     margin: 0 0 20px;
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
-    color: #666666;
+    color: #ffffff;
 }
 
 .plan-card .features li {
     margin-bottom: 10px;
 }
 
+.principal-feature {
+    font-size: large;
+    color: #fbff00;
+}
+
 .plan-card .btn {
     background-color: #ff6f61;
-    color: #ffffff;
+    color: #000000;
     padding: 10px 20px;
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
@@ -750,14 +788,52 @@ html {
     color: #ffffff;
 }
 
+/* Aquí se aplican las propiedades de ocultación y rotación a cada cara */
+.frontofCard, .backofCard {
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden; /* Esto oculta la parte trasera cuando no está en vista */
+    border-radius: 10px; /* Mantiene el mismo radio que el contenedor principal */
+}
+
+.frontofCard {
+    z-index: 2; /* Mantiene la parte frontal visible inicialmente */
+    transform: rotateY(0deg); /* Mantiene la parte frontal en su lugar */
+}
+
+.backofCard {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotateY(180deg); /* La parte trasera está oculta inicialmente */
+    background-color: #4e4e4e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plan-card.is-flipped {
+    transform: rotateY(180deg); /* Esto voltea la carta, mostrando la parte trasera */
+}
+
+.plan-card.fitContent{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    height: 1000px;
+}
+
+
+
 @media (max-width: 768px) {
     .plans-container {
-        flex-direction: column;
+        flex-wrap: wrap;
+        flex-direction: row;
         gap: 20px;
+        height: fit-content;
     }
 
     .plan-card {
-        width: 90%;
+        width: 100%;
     }
 }
 
@@ -767,9 +843,10 @@ html {
    Contact Section Styles 
 --------------------------------- */
 .section.contact {
-    background: linear-gradient(to bottom, #f9f9f9, #e0e0e0);
+    /*background: linear-gradient(to bottom, #f9f9f9, #e0e0e0);*/
+    background-color: rgb(62, 63, 63);
     padding: 60px 20px;
-    color: #333333;
+    color: #ffffff;
     text-align: center;
 }
 
@@ -777,7 +854,7 @@ html {
     font-family: 'Montserrat', sans-serif;
     font-size: 3rem;
     font-weight: 800;
-    color: #333333;
+    color: #ffffff;
     margin-bottom: 20px;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
     animation: contactMe 3s linear infinite;
@@ -785,7 +862,7 @@ html {
 .section.contact p {
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
-    color: #666666;
+    color: #e6e6e6;
     margin-bottom: 30px;
 }
 
@@ -793,6 +870,7 @@ html {
     max-width: 600px;
     margin: 0 auto;
     background: #ffffff;
+    margin-bottom: 120px;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
@@ -945,6 +1023,7 @@ html {
     border: 5px solid #333333;
     border-radius: 15rem;
     overflow: hidden;
+    scroll-behavior: smooth;
 }
 
 .ready-video video {
@@ -969,22 +1048,23 @@ html {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    display: none;
+    display: flex;
     border-radius: 100px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
 }
 
-.back-to-top.show {
-    display: block;
+.back-to-top.active {
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
 }
-
 
 .back-to-top:hover {
-    background-color: #3E2A1A;
+    background-color: #051646;
     transform: scale(1.1);
-}
-
-.back-to-top i {
-    pointer-events: none;
+    pointer-events: auto;
 }
 
 @media (max-width: 768px) {
